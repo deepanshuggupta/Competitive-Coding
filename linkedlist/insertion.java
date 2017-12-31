@@ -32,6 +32,15 @@ class LinkedList{
 			temp = temp.next;
 		}
 	}
+	void count(){
+		int count =0;
+		Node temp = head;
+		while(temp != null){
+			count++;
+			temp = temp.next;
+		}
+		System.out.println(count);
+	}
 } 
 class Node{
 	int data;
