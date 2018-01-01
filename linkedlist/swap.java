@@ -15,8 +15,8 @@ class Ideone
 		lst.push(2);
 		lst.push(3);
 		lst.push(4);
-		//lst.display();
-		lst.swap(2,4);
+		lst.display();
+		//lst.swap(2,4);
 		//lst.display();
 	}
 }
@@ -26,6 +26,7 @@ class LinkedList{
 		Node temp = new Node(data);
 		temp.next = head;
 		head = temp;
+		
 	}
 	
 	void display(){
@@ -36,6 +37,7 @@ class LinkedList{
 		}
 	}
 	void swap(int key1, int key2){
+		if(key1 ==key2) return;
 		Node temp = head;
 		Node temp1 = null;
 		Node temp2 = null;
@@ -48,8 +50,11 @@ class LinkedList{
 			}
 			temp = temp.next;
 		}
-		if(temp1 == null || temp2 == null) System.out.println("Not found");
-		else System.out.println("found");
+		if(temp1 == null || temp2 == null){
+			System.out.println("Not found");
+			return;
+		} 
+		
 	}
 } 
 class Node{
